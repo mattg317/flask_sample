@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask("__main__")
 
@@ -11,7 +11,7 @@ def home():
 @app.route("/about")
 def about():
     print("Retrieving about page")
-    return app.send_static_file('index.html')
+    return render_template('index.html')
 
 
 if __name__ == ("__main__"):
