@@ -5,13 +5,13 @@ app = Flask("__main__")
 @app.route("/")
 def home():
     print("Retrieving homepage")
-    return "Welcome to my home page"
+    return render_template("index.html")
 
 
 @app.route("/about")
 def about():
     print("Retrieving about page")
-    return render_template('index.html')
+    return "Hey There"
 
 
 if __name__ == ("__main__"):
